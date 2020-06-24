@@ -1,82 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200617 11:56:15.802" rpa="false">
-<suite id="s1" name="Test" source="C:\Users\oscafern\PycharmProjects\20200617_RobotFramework_Training\test.robot">
-<test id="s1-t1" name="Login">
-<kw name="Open Browser To Home Page">
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200624 21:32:56.532" rpa="false">
+<suite id="s1" name="Test" source="C:\Users\oscafern\Documents\Automation_Challenges\CodeRepository\20200617_RobotFramework_Training\test.robot">
+<test id="s1-t1" name="Add_Products">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${URL2}</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20200617 11:56:16.052" level="INFO">Opening browser 'Chrome' to base url 'http://testautomationplayground.northeurope.cloudapp.azure.com:8080/'.</msg>
-<status status="PASS" starttime="20200617 11:56:16.052" endtime="20200617 11:56:29.885"></status>
+<msg timestamp="20200624 21:32:58.235" level="INFO">Opening browser 'Chrome' to base url 'http://testautomationplayground.northeurope.cloudapp.azure.com:8080/'.</msg>
+<status status="PASS" starttime="20200624 21:32:58.235" endtime="20200624 21:33:09.779"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200617 11:56:29.885" endtime="20200617 11:56:32.033"></status>
+<status status="PASS" starttime="20200624 21:33:09.780" endtime="20200624 21:33:11.963"></status>
 </kw>
-<status status="PASS" starttime="20200617 11:56:16.052" endtime="20200617 11:56:32.034"></status>
-</kw>
-<kw name="Input Credentials and Submit">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${element_signin}</arg>
+<arg>xpath://mat-card[2]//button</arg>
 </arguments>
-<msg timestamp="20200617 11:56:32.035" level="INFO">Clicking element 'xpath://span[text()="Sign in"]'.</msg>
-<status status="PASS" starttime="20200617 11:56:32.034" endtime="20200617 11:56:32.413"></status>
+<msg timestamp="20200624 21:33:11.967" level="INFO">Clicking element 'xpath://mat-card[2]//button'.</msg>
+<status status="PASS" starttime="20200624 21:33:11.966" endtime="20200624 21:33:12.476"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${element_input_username}</arg>
-<arg>${user}</arg>
+<arg>xpath://mat-card[6]//button</arg>
 </arguments>
-<msg timestamp="20200617 11:56:32.414" level="INFO">Typing text 'oscar' into text field 'xpath://input[@formcontrolname="username"]'.</msg>
-<status status="PASS" starttime="20200617 11:56:32.413" endtime="20200617 11:56:32.608"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>${element_input_password}</arg>
-<arg>${pass}</arg>
-</arguments>
-<msg timestamp="20200617 11:56:32.608" level="INFO">Typing text 'abcd1234' into text field 'xpath://input[@formcontrolname="password"]'.</msg>
-<status status="PASS" starttime="20200617 11:56:32.608" endtime="20200617 11:56:32.994"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>${button_signin}</arg>
-</arguments>
-<msg timestamp="20200617 11:56:32.994" level="INFO">Clicking button 'xpath://app-sign-in-or-up-dialog//button[contains(., 'Sign in')]'.</msg>
-<status status="PASS" starttime="20200617 11:56:32.994" endtime="20200617 11:56:33.120"></status>
-</kw>
-<status status="PASS" starttime="20200617 11:56:32.034" endtime="20200617 11:56:33.120"></status>
-</kw>
-<kw name="Verify Login">
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<arguments>
-<arg>${element_welcomeMessage}</arg>
-</arguments>
-<status status="PASS" starttime="20200617 11:56:33.122" endtime="20200617 11:56:33.413"></status>
+<msg timestamp="20200624 21:33:12.480" level="INFO">Clicking element 'xpath://mat-card[6]//button'.</msg>
+<status status="PASS" starttime="20200624 21:33:12.479" endtime="20200624 21:33:12.656"></status>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
 <arguments>
-<arg>${element_welcomeMessage}</arg>
-<arg>${welcome_controltext}</arg>
+<arg>xpath://div[@class="cartDigit"]</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20200617 11:56:33.414" level="INFO">Verifying element 'xpath://span[contains(@class, 'welcomeMessage')]' contains exact text 'Welcome!'.</msg>
-<status status="PASS" starttime="20200617 11:56:33.414" endtime="20200617 11:56:33.457"></status>
+<msg timestamp="20200624 21:33:12.658" level="INFO">Verifying element 'xpath://div[@class="cartDigit"]' contains exact text '2'.</msg>
+<status status="PASS" starttime="20200624 21:33:12.657" endtime="20200624 21:33:12.751"></status>
 </kw>
-<status status="PASS" starttime="20200617 11:56:33.121" endtime="20200617 11:56:33.457"></status>
-</kw>
-<status status="PASS" starttime="20200617 11:56:16.051" endtime="20200617 11:56:33.458" critical="yes"></status>
+<tags>
+<tag>product</tag>
+</tags>
+<status status="PASS" starttime="20200624 21:32:58.234" endtime="20200624 21:33:12.753" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200617 11:56:15.805" endtime="20200617 11:56:33.460"></status>
+<status status="PASS" starttime="20200624 21:32:56.542" endtime="20200624 21:33:12.758"></status>
 </suite>
 <statistics>
 <total>
@@ -84,6 +53,7 @@
 <stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0">product</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" id="s1" name="Test">Test</stat>

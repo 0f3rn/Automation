@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200624 20:17:51.573" rpa="false">
+<suite id="s1" name="Test" source="C:\Users\oscafern\Documents\Automation_Challenges\CodeRepository\20200617_RobotFramework_Training\test.robot">
+<test id="s1-t1" name="Open_Google">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200624 20:17:52.027" level="INFO">Opening browser 'Chrome' to base url 'http://www.google.com'.</msg>
+<status status="PASS" starttime="20200624 20:17:52.026" endtime="20200624 20:17:55.753"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200624 20:17:55.756" endtime="20200624 20:17:57.893"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@type="text"]</arg>
+<arg>Oscar Fernandez</arg>
+</arguments>
+<msg timestamp="20200624 20:17:57.921" level="INFO">Typing text 'Oscar Fernandez' into text field 'xpath://input[@type="text"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200624 20:17:58.507" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200624 20:17:57.969" endtime="20200624 20:17:58.507"></status>
+</kw>
+<msg timestamp="20200624 20:17:58.554" level="FAIL">Element with locator 'xpath://input[@type="text"]' not found.</msg>
+<status status="FAIL" starttime="20200624 20:17:57.920" endtime="20200624 20:17:58.555"></status>
+</kw>
+<status status="FAIL" starttime="20200624 20:17:52.026" endtime="20200624 20:17:58.556" critical="yes">Element with locator 'xpath://input[@type="text"]' not found.</status>
+</test>
+<test id="s1-t2" name="Add_Products">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL2}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200624 20:17:58.571" level="INFO">Opening browser 'Chrome' to base url 'http://testautomationplayground.northeurope.cloudapp.azure.com:8080/'.</msg>
+<status status="PASS" starttime="20200624 20:17:58.570" endtime="20200624 20:18:08.454"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200624 20:18:08.454" endtime="20200624 20:18:10.575"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://mat-card[2]//button</arg>
+</arguments>
+<msg timestamp="20200624 20:18:10.575" level="INFO">Clicking element 'xpath://mat-card[2]//button'.</msg>
+<status status="PASS" starttime="20200624 20:18:10.575" endtime="20200624 20:18:10.746"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://mat-card[6]//button</arg>
+</arguments>
+<msg timestamp="20200624 20:18:10.749" level="INFO">Clicking element 'xpath://mat-card[6]//button'.</msg>
+<status status="PASS" starttime="20200624 20:18:10.748" endtime="20200624 20:18:10.826"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>xpath://div[@class="cartDigit"]</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200624 20:18:10.827" level="INFO">Verifying element 'xpath://div[@class="cartDigit"]' contains exact text '2'.</msg>
+<status status="PASS" starttime="20200624 20:18:10.827" endtime="20200624 20:18:10.856"></status>
+</kw>
+<tags>
+<tag>product</tag>
+</tags>
+<status status="PASS" starttime="20200624 20:17:58.562" endtime="20200624 20:18:10.857" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Login">
+<kw name="Open Browser To Home Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL2}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200624 20:18:10.859" level="INFO">Opening browser 'Chrome' to base url 'http://testautomationplayground.northeurope.cloudapp.azure.com:8080/'.</msg>
+<status status="PASS" starttime="20200624 20:18:10.859" endtime="20200624 20:18:21.679"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200624 20:18:21.680" endtime="20200624 20:18:23.807"></status>
+</kw>
+<status status="PASS" starttime="20200624 20:18:10.859" endtime="20200624 20:18:23.807"></status>
+</kw>
+<kw name="Input Credentials and Submit">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${element_signin}</arg>
+</arguments>
+<msg timestamp="20200624 20:18:23.808" level="INFO">Clicking element 'xpath://span[text()="Sign in"]'.</msg>
+<status status="PASS" starttime="20200624 20:18:23.808" endtime="20200624 20:18:23.979"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element_input_username}</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200624 20:18:23.979" level="INFO">Typing text 'oscar' into text field 'xpath://input[@formcontrolname="username"]'.</msg>
+<status status="PASS" starttime="20200624 20:18:23.979" endtime="20200624 20:18:24.109"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${element_input_password}</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20200624 20:18:24.110" level="INFO">Typing text 'abcd1234' into text field 'xpath://input[@formcontrolname="password"]'.</msg>
+<status status="PASS" starttime="20200624 20:18:24.109" endtime="20200624 20:18:24.278"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${button_signin}</arg>
+</arguments>
+<msg timestamp="20200624 20:18:24.278" level="INFO">Clicking button 'xpath://app-sign-in-or-up-dialog//button[contains(., 'Sign in')]'.</msg>
+<status status="PASS" starttime="20200624 20:18:24.278" endtime="20200624 20:18:24.392"></status>
+</kw>
+<status status="PASS" starttime="20200624 20:18:23.808" endtime="20200624 20:18:24.392"></status>
+</kw>
+<kw name="Verify Login">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${element_welcomeMessage}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200624 20:18:29.958" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200624 20:18:29.529" endtime="20200624 20:18:29.958"></status>
+</kw>
+<msg timestamp="20200624 20:18:29.965" level="FAIL">Element 'xpath://span[contains(@class, 'welcomeMessage')]' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20200624 20:18:24.393" endtime="20200624 20:18:29.966"></status>
+</kw>
+<status status="FAIL" starttime="20200624 20:18:24.393" endtime="20200624 20:18:29.966"></status>
+</kw>
+<status status="FAIL" starttime="20200624 20:18:10.858" endtime="20200624 20:18:29.968" critical="yes">Element 'xpath://span[contains(@class, 'welcomeMessage')]' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20200624 20:17:51.577" endtime="20200624 20:18:29.970"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2">Critical Tests</stat>
+<stat pass="1" fail="2">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">product</stat>
+</tag>
+<suite>
+<stat pass="1" fail="2" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
